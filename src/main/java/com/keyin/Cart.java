@@ -52,6 +52,16 @@ return total;
        System.out.printf("Total Amount: $%.2f%n", getTotal());
     }
 
+    // Changed Checkout into method
+    public String processingCheckOut(){
+        if(cartIsEmpty()){
+            return "Your Cart is empty. There is no items to checkout";
+        }
+        dobule total = getTotal();
+        deleteGames();
+        return String.format("Your purchase was successful! Total amount: $%.2f", total);
+    }
+
 
 
 

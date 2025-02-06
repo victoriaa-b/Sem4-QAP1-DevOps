@@ -20,4 +20,4 @@ public class ViewGames {
         return new ArrayList<>(inventory);
     }
 }
-}
+
