@@ -27,6 +27,18 @@ public class Cart {
         items.clear();
     }
 
+    public boolean cartIsEmpty(){
+        return items.isEmpty();
+    }
+
+    public double getTotal(){
+        double total = 0;
+        for (Game game : items) {
+            total += game.getPrice();
+        }
+return total;
+    }
+
     public void displayCart(){
         if (items.isEmpty()) {
             System.out.println("No items in your cart.");
@@ -35,12 +47,12 @@ public class Cart {
 
         System.out.println("Shopping Cart Contains:");
         for (Game game : items){
-            System.out.println(gamr);
+            System.out.println(game);
         }
-
-        // Make get total method
-        System.out.print("Total Amount:", getTotal());
+       System.out.printf("Total Amount: $%.2f%n", getTotal());
     }
+
+
 
 
 
