@@ -57,7 +57,7 @@ return total;
         if(cartIsEmpty()){
             return "Your Cart is empty. There is no items to checkout";
         }
-        dobule total = getTotal();
+        double total = getTotal();
         deleteGames();
         return String.format("Your purchase was successful! Total amount: $%.2f", total);
     }
