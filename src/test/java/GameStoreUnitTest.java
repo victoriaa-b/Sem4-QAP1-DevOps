@@ -34,4 +34,12 @@ public class GameStoreUnitTest {
         cart.addGame(new Game("Among Us", 39.99,8), true);
         assertEquals(69.98, cart.getTotal(), 0.01);
     }
+
+    @Test
+    void purchaseProcessingTest(){
+        cart.addGame(new Game("Call of Duty", 49.99,9), true);
+        String order = cart.processingCheckOut();
+        assertTrue(order.contains("Your order was processed."));
+        assertTrue(cart.cartIsEmpty());
+    }
 }
