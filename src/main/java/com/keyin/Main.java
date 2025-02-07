@@ -72,7 +72,7 @@ public class Main {
                     }
                 }
                 if (gameOption != null) {
-                    cart.addGame(gameOption);
+                    cart.addGame(gameOption,true);
                     System.out.println("Game has been added to your cart: " + gameOption.getTitle());
                 } else {
 
