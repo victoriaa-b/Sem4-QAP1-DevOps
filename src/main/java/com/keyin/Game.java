@@ -35,5 +35,9 @@ public class Game {
     public void setGameId(int gameID){
         this.gameID = gameID;
     }
+    @Override
+    public String toString() {
+        return getTitle() + " - $" + String.format("%.2f", getPrice());
+    }
 
 }

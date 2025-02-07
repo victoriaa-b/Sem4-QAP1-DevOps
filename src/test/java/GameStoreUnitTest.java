@@ -28,4 +28,10 @@ public class GameStoreUnitTest {
         assertEquals(0.0, cart.getTotal(), "Total should be $0 when the cart is empty.");
     }
 
+    @Test
+    void cartTotalTest(){
+        cart.addGame(new Game("Goose Goose Duck", 29.99,7), true);
+        cart.addGame(new Game("Among Us", 39.99,8), true);
+        assertEquals(69.98, cart.getTotal(), 0.01);
+    }
 }
