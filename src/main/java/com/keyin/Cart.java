@@ -61,7 +61,7 @@ return total;
         }
         double total = getTotal();
         deleteGames();
-        return String.format("Your purchase was successful! Total amount: $%.2f", total);
+        return "Your order was processed.";
     }
 
 
