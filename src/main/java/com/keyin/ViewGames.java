@@ -3,7 +3,6 @@ package com.keyin;
 import java.util.ArrayList;
 import java.util.List;
 
-// Unit test - Validate game addition/removal
 public class ViewGames {
     private static List<Game> inventory = new ArrayList<>();
 

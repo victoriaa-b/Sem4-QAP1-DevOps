@@ -3,8 +3,6 @@ package com.keyin;
 import java.util.Scanner;
 import java.lang.NumberFormatException;
 
-// Make CLI system
-// Replace console into scanner
 public class Main {
     private static Cart cart = new Cart();
 
@@ -26,13 +24,13 @@ public class Main {
 
                 switch (option) {
                     case 1:
-                        LoadsViewGames(scanner); // add logic
+                        LoadsViewGames(scanner);
                         break;
                     case 2:
                         cart.displayCart();
                         break;
                     case 3:
-                        LoadsCheckout(scanner); // add logic
+                        LoadsCheckout(scanner);
                         break;
                     case 4:
                         loading = false;
@@ -48,7 +46,8 @@ public class Main {
         scanner.close();
 
     }
-//
+
+    // View Games method
     private static void LoadsViewGames(Scanner scanner) {
         ViewGames.getInventory().forEach(game ->
                 System.out.println(game.getTitle() + " - $" + String.format("%.2f", game.getPrice()) + " " + "Game ID - " + game.getGameID() )
@@ -57,7 +56,8 @@ public class Main {
         String input = scanner.nextLine();
         GameSelection(input, scanner);
     }
-    //
+
+    // Game Selection Method
     private static void GameSelection(String input, Scanner scanner){
         try {
             int gameId = Integer.parseInt(input.trim());
@@ -83,7 +83,8 @@ public class Main {
             System.out.println("Please try another game ID.");
         }
     }
-    //
+
+    // Load Checkout Methods
     private static void LoadsCheckout(Scanner scanner) {
         cart.displayCart();
         if (cart.cartIsEmpty()) {

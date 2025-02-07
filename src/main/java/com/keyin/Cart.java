@@ -3,7 +3,6 @@ package com.keyin;
 import java.util.ArrayList;
 import java.util.List;
 
-// Unit Test - Cart total calculation
 public class Cart {
     private List<Game> items;
 
@@ -12,15 +11,9 @@ public class Cart {
         this.items = new ArrayList<>();
     }
 
-    // Add to the cart
-    // Delete from cart
-    // Display The cart
-    // ? maybe total price of the cart
-
     public void addGame(Game game, boolean noPrint) {
         items.add(game);
         if (!noPrint) {
-            // double check if the space is needed in the string
             System.out.println(game.getTitle() + " has been successfully added to your cart.");
         }
     }
